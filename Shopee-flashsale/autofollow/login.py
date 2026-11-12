@@ -53,7 +53,6 @@ class Login:
         }.get(True, "username")
         password = md5(password.encode()).hexdigest()
         password = sha256(password.encode()).hexdigest()
-        print(password)
         resp = self.session.post(
             url="https://shopee.vn/api/v2/authentication/login",
             headers=self.__default_headers(),
